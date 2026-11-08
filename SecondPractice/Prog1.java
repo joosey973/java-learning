@@ -85,7 +85,6 @@ public class Prog1 {
             else if (answer.equals("end")) {
                 break;
             } else {
-                System.out.println(answer);
                 System.out.println("Оперция не распознана\n");
             }
 

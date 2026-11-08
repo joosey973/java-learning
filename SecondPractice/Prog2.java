@@ -1,5 +1,6 @@
 package SecondPractice;
 
+import SecondPractice.methods.MathMethods;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -63,7 +64,7 @@ public class Prog2 {
         scannerIn.nextLine();
 
         double eps = 1e-6;
-        if (Math.abs(firstNum - secondNum) < eps) {
+        if (MathMethods.abs(firstNum - secondNum) < eps) {
             System.out.println("Числа равны!\n");
         } else if (firstNum > secondNum) {
             System.out.println("Первое число больше второго!\n");
