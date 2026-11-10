@@ -5,12 +5,12 @@ public class Author {
     private Book[] books;
 
     public Author() {
-        name = "Unknown";
+        this.name = "Unknown";
     }
 
     public Author(String authorName, Book[] authorBooks) {
-        name = authorName;
-        books = authorBooks.clone();
+        this.name = authorName;
+        this.books = authorBooks.clone();
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Author {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Информация об авторе:\n\n");
         stringBuilder.append("Имя автора: ");
-        stringBuilder.append(name);
+        stringBuilder.append(this.name);
         stringBuilder.append("\n");
         stringBuilder.append("Названия книг: ");
         for (int i = 0; i < books.length; i++) {

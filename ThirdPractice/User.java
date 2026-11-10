@@ -8,16 +8,16 @@ public class User {
     public static long totalOnline = 0;
 
     public User() {
-        name = "Unknown";
-        surname = "Unknown";
-        email = "Unknown@gmail.com";
+        this.name = "Unknown";
+        this.surname = "Unknown";
+        this.email = "Unknown@gmail.com";
         totalOnline++;
     }
 
     public User(String userName, String userSurname, String userEmail) {
-        name = userName;
-        surname = userSurname;
-        email = userEmail;
+        this.name = userName;
+        this.surname = userSurname;
+        this.email = userEmail;
         totalOnline++;
     }
 
@@ -26,13 +26,13 @@ public class User {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Информация о пользователе:\n\n");
         stringBuilder.append("Имя: ");
-        stringBuilder.append(name);
+        stringBuilder.append(this.name);
         stringBuilder.append("\n");
         stringBuilder.append("Фамилия: ");
-        stringBuilder.append(surname);
+        stringBuilder.append(this.surname);
         stringBuilder.append("\n");
         stringBuilder.append("Почта: ");
-        stringBuilder.append(email);
+        stringBuilder.append(this.email);
         stringBuilder.append("\n\n");
         return stringBuilder.toString();
     }

@@ -6,23 +6,23 @@ public class Book {
     private final int pages;
 
     public Book() {
-        title = "Unknown";
-        text = "...";
-        pages = 0;
+        this.title = "Unknown";
+        this.text = "...";
+        this.pages = 0;
     }
 
     public Book(String ti, String txt, int pg) {
-        title = ti;
-        text = txt;
-        pages = pg;
+        this.title = ti;
+        this.text = txt;
+        this.pages = pg;
     }
 
     public int getPages() {
-        return pages;
+        return this.pages;
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public static void compareTwoBooks(Book book1, Book book2) {
@@ -46,13 +46,13 @@ public class Book {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Информация о книге:\n\n");
         stringBuilder.append("Название книги: ");
-        stringBuilder.append(title);
+        stringBuilder.append(this.title);
         stringBuilder.append("\n");
         stringBuilder.append("Количество страниц: ");
-        stringBuilder.append(pages);
+        stringBuilder.append(this.pages);
         stringBuilder.append("\n");
         stringBuilder.append("Текст книги: ");
-        stringBuilder.append(text);
+        stringBuilder.append(this.text);
         stringBuilder.append("\n\n");
         return stringBuilder.toString();
     }
