@@ -16,6 +16,12 @@ public class Contact {
         this.telephone = telephone;
     }
 
+
+    @Override    
+    public int hashCode() {
+        return Objects.hash(this.name, this.telephone);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

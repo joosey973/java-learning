@@ -1,10 +1,10 @@
 package SeventhPractice;
 
 import SeventhPractice.Contacts.Contact;
+import SeventhPractice.Contacts.MissedCalls;
 import SeventhPractice.Contacts.PhoneBook;
 
-public class Prog3 {
-
+public class Prog3_2 {
     public static void main(String[] args) {
         Contact vasyaContact = new Contact("Вася", "+79315778191");
         Contact petyaContact = new Contact("Петя", "+79315778190");
@@ -21,8 +21,15 @@ public class Prog3 {
         phoneBook.addContactToGroup("Дом", kolyaContact);
         phoneBook.addContactToGroup("Дом", vasyaContact);
 
-        System.out.println(phoneBook);
-        System.out.println(phoneBook.findContactsByGroup("Работа"));
-        System.out.println(phoneBook.findContacByTelephone("+79315778191"));
+        MissedCalls missedCalls = new MissedCalls();
+
+        missedCalls.printMissedCalls(phoneBook);
+
+        missedCalls.addMissedCall("+79315778191");
+        missedCalls.addMissedCall("+79315778191");
+        missedCalls.addMissedCall("+79315778190");
+        missedCalls.addMissedCall("+79315778199");
+
+        missedCalls.printMissedCalls(phoneBook);
     }
 }
