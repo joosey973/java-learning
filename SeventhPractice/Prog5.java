@@ -12,6 +12,7 @@ public class Prog5 {
     public static List<Candidate> getCandidates() {
         List<Candidate> candidates = new ArrayList<>();
         candidates.add(new Candidate("Зубенко Михаил Петрович", "муж", "21", 5, 5));
+        candidates.add(new Candidate("Василенко Михаил Петрович", "муж", "21", 5, 5));
         candidates.add(new Candidate("Зубенко Михаил Петрович", "муж", "19", 1, 5));
         candidates.add(new Candidate("Михйлов Михаил Иванович", "муж", "50", 3, 4));
         candidates.add(new Candidate("Михалков Петр Иванович", "муж", "32", 3, 5));
@@ -29,8 +30,10 @@ public class Prog5 {
         TreeSet<Candidate> candidateSet = new TreeSet<>(
             Comparator.comparing(Candidate::getRelevance, Comparator.reverseOrder())
             .thenComparing(Candidate::getRating, Comparator.reverseOrder())
+            .thenComparing(Candidate::getName)
         );
         candidateSet.addAll(candidatesHashSet);
+        System.out.println(candidatesHashSet);
 
         for (Candidate candidate: candidateSet) {
             System.out.printf("- %s%n", candidate);
